@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/NHLGuerrero/Porfolio.git"
+        "url": "https://github.com/NHLGuerrero/aut-ui-bdd-webdriverio.git"
     },
     "keywords": [
         "wdio",
@@ -20,9 +20,9 @@
     "author": "Nahuel Guerrero",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/NHLGuerrero/Porfolio/issues"
+        "url": "https://github.com/NHLGuerrero/aut-ui-bdd-webdriverio.git"
     },
-    "homepage": "https://github.com/NHLGuerrero/Porfolio#readme",
+    "homepage": "https://github.com/NHLGuerrero/aut-ui-bdd-webdriverio.git#readme",
     "devDependencies": {
         "@wdio/allure-reporter": "^7.16.14",
         "@wdio/cli": "^7.16.16",
