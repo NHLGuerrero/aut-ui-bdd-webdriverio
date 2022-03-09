@@ -4,8 +4,15 @@
     "description": "UI Test Automation",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "wdio": "wdio run wdio.conf.ts"
+        "build": "npx tsc",
+        "test": "echo \"Error; no test specified\" && exit 1",
+        "clean": "rimraf .tsbuid && rimraf allure-results && rimraf allure-report && rimraf junit-results",
+        "clean-build": "npm run clean && npm run build",
+        "execute-tests": "npm run clean-build && npx wdio run ./wdio.conf.ts",
+        "execute-test-tag": "npm run clean-build && npx wdio run ./config/wdio.conf.ts --cucumberOpts.tagExpression \"@run\"",
+        "clean-report": "allure generate --clean ./allure-results",
+        "open-report": "npm run clean-report && allure open",
+        "report": "npm run clean-report && npm run open-report"
     },
     "repository": {
         "type": "git",
@@ -32,5 +39,9 @@
         "@wdio/spec-reporter": "^7.16.14",
         "chromedriver": "^98.0.1",
         "wdio-chromedriver-service": "^7.2.8"
+    },
+    "dependencies": {
+        "allure-commandline": "^2.17.2",
+        "rimraf": "^3.0.2"
     }
 }

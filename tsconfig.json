@@ -1,11 +1,29 @@
 {
     "compilerOptions": {
-        "types": [
-            "node",
-            "webdriverio/async",
-            "@wdio/cucumber-framework",
-            "expect-webdriverio"
-        ],
-        "target": "ES5"
-    }
-}
+      "outDir": "./.tsbuild/",
+      "sourceMap": true,
+      "target": "es2019",
+      "module": "commonjs",
+      "removeComments": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "declaration": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "resolveJsonModule": true,
+      "typeRoots": [
+        "./node_modules/@types",
+        "./node_modules/@wdio"
+      ],
+      "types": [
+        "node",
+        "webdriverio/async",
+        "@wdio/cucumber-framework",
+        "expect-webdriverio",
+      ]
+    },
+    "exclude": [
+      "node_modules",
+      "./.tsbuild/"
+    ]
+  }
