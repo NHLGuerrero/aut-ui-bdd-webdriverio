@@ -1,0 +1,61 @@
+[ {
+  "uid" : "c21f78215f061339",
+  "name" : "Then I should see a flash message saying You logged into a secure area!",
+  "time" : {
+    "start" : 1646855425859,
+    "stop" : 1646855426782,
+    "duration" : 923
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "91cb7a7afac4d0c7",
+  "name" : "When I login with tomsmith and SuperSecretPassword!",
+  "time" : {
+    "start" : 1646855422246,
+    "stop" : 1646855425859,
+    "duration" : 3613
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3017870bfbed8005",
+  "name" : "Then I should see a flash message saying Your username is invalid!",
+  "time" : {
+    "start" : 1646855431369,
+    "stop" : 1646855431888,
+    "duration" : 519
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "25668ee7d1eedeba",
+  "name" : "",
+  "time" : {
+    "start" : 1646855431888,
+    "stop" : 1646855431889,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f6093d8c547845b9",
+  "name" : "When I login with foobar and barfoo",
+  "time" : {
+    "start" : 1646855428129,
+    "stop" : 1646855431368,
+    "duration" : 3239
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76a2110c9cd53984",
+  "name" : "Given I am on the login page",
+  "time" : {
+    "start" : 1646855426862,
+    "stop" : 1646855428129,
+    "duration" : 1267
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

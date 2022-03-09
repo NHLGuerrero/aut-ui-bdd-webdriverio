@@ -1,0 +1,179 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "0-0",
+    "children" : [ {
+      "name" : "Given I am on the login page",
+      "uid" : "8b52f3fd0337b90f",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855418339,
+        "stop" : 1646855422246,
+        "duration" : 3907
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    }, {
+      "name" : "When I login with foobar and barfoo",
+      "uid" : "f6093d8c547845b9",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855428129,
+        "stop" : 1646855431368,
+        "duration" : 3239
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    }, {
+      "name" : "",
+      "uid" : "67178ccedb326012",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855418332,
+        "stop" : 1646855418338,
+        "duration" : 6
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    }, {
+      "name" : "",
+      "uid" : "a8d6c3042e57c51d",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855426860,
+        "stop" : 1646855426861,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    }, {
+      "name" : "Then I should see a flash message saying You logged into a secure area!",
+      "uid" : "c21f78215f061339",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855425859,
+        "stop" : 1646855426782,
+        "duration" : 923
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    }, {
+      "name" : "",
+      "uid" : "25668ee7d1eedeba",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855431888,
+        "stop" : 1646855431889,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 3,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    }, {
+      "name" : "When I login with tomsmith and SuperSecretPassword!",
+      "uid" : "91cb7a7afac4d0c7",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855422246,
+        "stop" : 1646855425859,
+        "duration" : 3613
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    }, {
+      "name" : "",
+      "uid" : "287347d73ff29d05",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855426783,
+        "stop" : 1646855426784,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    }, {
+      "name" : "Then I should see a flash message saying Your username is invalid!",
+      "uid" : "3017870bfbed8005",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855431369,
+        "stop" : 1646855431888,
+        "duration" : 519
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    }, {
+      "name" : "Given I am on the login page",
+      "uid" : "76a2110c9cd53984",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646855426862,
+        "stop" : 1646855428129,
+        "duration" : 1267
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 1,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-99.0.4844.51" ]
+    } ],
+    "uid" : "516fe00eea05ad99e936fa729b55eff4"
+  } ]
+}
