@@ -1,9 +1,9 @@
-## Automation UI BDD WebdriverIO - EN DESARROLLO
+# Automation UI BDD WebdriverIO - EN DESARROLLO
 
-### Proyecto basado en WebDriverIO, Cucumber, TypeScript, Allure Report y Node.js
-#
+Proyecto basado en WebDriverIO, Cucumber, TypeScript, Allure Report y Node.js
 
 ## Estructura del proyecto
+
 
 - features: archivos en lenguaje Gherkin con escenarios de prueba.
 - stepDefinitions: scripts de flujos de prueba.
