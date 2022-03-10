@@ -10,7 +10,7 @@ exports.config = {
         }
     },
     specs: [
-        './features/**/*.feature'
+        './portafolio/**/*.feature'
     ],
     exclude: [],
     maxInstances: 10,
@@ -29,7 +29,7 @@ exports.config = {
     framework: 'cucumber',
     reporters: ['spec', 'junit', ['allure', { outputDir: 'allure-results' }]],
     cucumberOpts: {
-        require: ['./features/step-definitions/steps.ts'],
+        require: ['./portafolio/step-definitions/steps.ts'],
         backtrace: false,
         requireModule: [],
         dryRun: false,
