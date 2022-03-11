@@ -1,12 +1,9 @@
-Feature: The Internet Guinea Pig Website
+@login
+Feature: Sitio Web de SauceDemo
 
-  Scenario Outline: As a user, I can log into the secure area
+  @login_01 @run
+  Scenario: Alta de usuario con campos correcto
 
-    Given I am on the login page
-    When I login with <username> and <password>
-    Then I should see a flash message saying <message>
-
-    Examples:
-      | username | password             | message                        |
-      | tomsmith | SuperSecretPassword! | You logged into a secure area! |
-      | foobar   | barfoo               | Your username is invalid!      |
+    Given Estoy en la pagina de inicio de sesion
+    When Inicio sesion con standard_user y secret_sauce
+    Then Se muestra el titulo PRODUCTS en la pantalla home
