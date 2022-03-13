@@ -5,12 +5,9 @@ Proyecto basado en WebDriverIO, Cucumber, TypeScript, Allure Report y Node.js
 ## Estructura del proyecto
 
 
-- features: archivos en lenguaje Gherkin con escenarios de prueba.
-- stepDefinitions: scripts de flujos de prueba.
-- pages: clases con Page Objects modelados.
-- package.json: dependencias del proyecto. 
-- tsconfig.json: archivos de configuración para la ejecución.
-- node_modules: dependencias.
+- portafolio/features: archivos en lenguaje Gherkin con escenarios de prueba.
+- portafolio/stepDefinitions: scripts de flujos de prueba.
+- portafolio/pages: clases con Page Objects modelados.
 - README.md: documentación de uso.
 
 ## Requisitos
@@ -36,6 +33,11 @@ Proyecto basado en WebDriverIO, Cucumber, TypeScript, Allure Report y Node.js
 
         npm run execute-tests
 
+- Ejecución por tag:
+Agregando @run a el/los casos de prueba a ejecutar.
+
+        npm run execute-test-tag
+
 - Crear y abrir reportes:
 
         npm run report
@@ -46,4 +48,3 @@ Proyecto basado en WebDriverIO, Cucumber, TypeScript, Allure Report y Node.js
 - Documentación npm: https://www.npmjs.com/
 
 - Commits convencionales: https://www.conventionalcommits.org/es/v1.0.0-beta.2/
-
