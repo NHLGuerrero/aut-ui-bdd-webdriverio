@@ -17,6 +17,10 @@ class LoginPage extends Page {
         return $('#login-button');
     }
 
+    public get errorMessage(): ChainablePromiseElement<WebdriverIO.Element> {
+        return $('//div[@class="error-message-container error"]')
+    }
+
     public async login (username: string, password: string): Promise<void> {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);

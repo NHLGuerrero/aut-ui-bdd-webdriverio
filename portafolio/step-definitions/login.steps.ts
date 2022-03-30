@@ -7,11 +7,19 @@ Given(/^Estoy en la pagina de inicio de sesion$/, async () => {
     await LoginPage.open();
 });
 
-When(/^Inicio sesion con (.+) y (.+)$/, async (username:string, password:string) => {
-    //await browser.debug();
-    await LoginPage.login(username, password)
+Then(/^Se muestra el titulo (.*) en la pantalla home$/, async (title:string) => {
+    await expect(await HomePage.titleProducts).toHaveTextContaining(title);
 });
 
-Then(/^Se muestra el titulo (.*) en la pantalla home$/, async (titulo:string) => {
-    await expect(await HomePage.titleProducts).toHaveTextContaining(titulo);
+When(/^Inicio sesion con (.+) y (.+)$/, async (username:string, password:string) => {
+    if (password == "[empty]") {
+        password = "";
+    } else if (username == "[empty]") {
+        username = "";
+    }
+    await LoginPage.login(username, password);
+});
+
+Then(/^Se muestra el mensaje de error (.*)$/, async (message:string) => {
+    await expect(await LoginPage.errorMessage).toHaveTextContaining(message);
 });
