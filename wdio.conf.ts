@@ -124,7 +124,7 @@ export const config: WebdriverIO.Config = {
     baseUrl: 'https://www.saucedemo.com/',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 30000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -166,7 +166,7 @@ export const config: WebdriverIO.Config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./portafolio/step-definitions/login.steps.ts'],
+        require: ['./portafolio/step-definitions/login.steps.ts','./portafolio/step-definitions/compras.steps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

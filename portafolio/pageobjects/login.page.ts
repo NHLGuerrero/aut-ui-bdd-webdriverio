@@ -2,7 +2,6 @@ import { ChainablePromiseElement } from 'webdriverio';
 
 import Page from './page';
 
-
 class LoginPage extends Page {
     
      public get inputUsername(): ChainablePromiseElement<WebdriverIO.Element> {
