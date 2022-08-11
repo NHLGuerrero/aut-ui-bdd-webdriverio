@@ -4,7 +4,7 @@ Feature: Sitio Web de SauceDemo
   Background:
     Given Estoy en la pagina de inicio de sesion
 
-  @login_01
+  @login_01 
   Scenario: Alta de usuario con campos correctos
 
     When Inicio sesion con standard_user y secret_sauce
