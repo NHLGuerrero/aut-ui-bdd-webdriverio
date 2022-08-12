@@ -7,7 +7,7 @@ import infoCheckout from '../pageobjects/information.page';
 import overview from '../pageobjects/overview.page';
 import complete from '../pageobjects/complete.page';
 
-Given(/^Estoy en la pagina de inicio home$/, async (title) => {
+Given(/^Estoy en la pagina de home$/, async (title: string) => {
     await loginPage.open();
     await expect(await homePage.titleProducts).toHaveTextContaining(title);
 });

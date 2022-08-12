@@ -23,6 +23,13 @@ class HomePage extends Page {
     public get btnShopping(): ChainablePromiseElement<WebdriverIO.Element> {
         return $('//a[@class="shopping_cart_link"]')
     }
+
+    public async selecProducts (): Promise<void> {
+        await this.btnAddBolt.click();
+        await this.btnAddOnesie.click();
+        await this.btnAddBlackpack.click();
+        await this.btnShopping.click();
+    }
 }
 
 export default new HomePage();
