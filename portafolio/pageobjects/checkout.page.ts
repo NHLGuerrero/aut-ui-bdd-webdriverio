@@ -2,7 +2,7 @@ import { ChainablePromiseElement } from 'webdriverio';
 
 import Page from './page';
 
-class InfoCheckout extends Page {
+class CheckoutPage extends Page {
 
     public get titleYourInformation(): ChainablePromiseElement<WebdriverIO.Element> {
        return $('//div[2]/span')
@@ -24,13 +24,12 @@ class InfoCheckout extends Page {
         return $('#continue');
     }
 
-    public async information (firtsname: string, lastname: string, postalcode: number): Promise<void> {
-        await this.inputFirtsName.setValue(firtsname);
-        await this.inputLastName.setValue(lastname);
-        await this.inputPostalCode.setValue(postalcode)
-        await this.btnContinue.click();
+    public async completeCheckout (datosPersonales : any[]): Promise<void> {
+        await this.inputFirtsName.setValue(datosPersonales[0].Nombre);
+        await this.inputLastName.setValue(datosPersonales[0].Apellido);
+        await this.inputPostalCode.setValue(datosPersonales[0].CodigoPostal)
     }
 
 }
 
-export default new InfoCheckout();
+export default new CheckoutPage();

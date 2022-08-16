@@ -1,24 +1,38 @@
-import { Given, When, Then } from '@wdio/cucumber-framework';
+import { Given, When, Then, DataTable } from '@wdio/cucumber-framework';
 
-import loginPage from '../pageobjects/login.page';
-import homePage from '../pageobjects/home.page';
-import contentShopping from '../pageobjects/shopping.page';
-import infoCheckout from '../pageobjects/information.page';
-import overview from '../pageobjects/overview.page';
+import overviewPage from '../pageobjects/overview.page';
 import complete from '../pageobjects/complete.page';
+import homePage from '../pageobjects/home.page';
+import shoppingPage from '../pageobjects/shopping.page';
+import checkoutPage from '../pageobjects/checkout.page';
+import completePage from '../pageobjects/complete.page';
 
-Given(/^Estoy en la pagina de home$/, async (title: string) => {
-    await loginPage.open();
-    await expect(await homePage.titleProducts).toHaveTextContaining(title);
+let products; 
+
+When (/^Añado al carrito los productos$/, async (dataTable : DataTable) => {
+    products = dataTable.hashes();
+    await homePage.addProductToCart(products)
+    await homePage.goToCartShopping();
+    for (let i = 0; i< (await shoppingPage.inventoryItemsName).length; i++ ) {
+        await expect((await shoppingPage.inventoryItemsName)[i]).toHaveTextContaining(products[i].Producto);
+    }
 });
 
-Then (/^Visualizo el titulo \"(.*?)\" en la pantalla de compras$/, async (title:string) => {
-    await expect(await contentShopping.titleYourCart).toHaveTextContaining(title);
-    await expect(await infoCheckout.titleYourInformation).toHaveTextContaining(title);
-    await expect(await overview.titleOverview).toHaveTextContaining(title);
-    await expect(await complete.titleComplete).toHaveTextContaining(title);
+When (/^Completo los datos de compra$/, async (dataTable : DataTable) => {
+    const datosPersonales = dataTable.hashes();
+    await shoppingPage.goToCheckout();
+    await checkoutPage.completeCheckout(datosPersonales);
 });
 
-When (/^Completo los campos con (.+), (.+) y (.+)$/, async (firtsname:string, lastname:string, postalcode:number) => {
-    await infoCheckout.information(firtsname, lastname, postalcode);
+When (/^Visualizo el resumen de compra$/, async () => {
+    await checkoutPage.btnContinue.click();
+    for (let i = 0; i< (await shoppingPage.inventoryItemsName).length; i++ ) {
+        await expect((await shoppingPage.inventoryItemsName)[i]).toHaveTextContaining(products[i].Producto);
+    }
+});
+
+
+Then (/^Finalizo la compra y visualizo el mensaje de compra exitosa \"(.*?)\"$/, async (mensaje : string) => {
+    await overviewPage.finishPurchase()
+    await expect((await completePage.lblGratitude)).toHaveTextContaining(mensaje);
 });

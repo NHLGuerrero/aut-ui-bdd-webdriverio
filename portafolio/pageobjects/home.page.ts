@@ -24,10 +24,19 @@ class HomePage extends Page {
         return $('//a[@class="shopping_cart_link"]')
     }
 
-    public async selecProducts (): Promise<void> {
-        await this.btnAddBolt.click();
-        await this.btnAddOnesie.click();
-        await this.btnAddBlackpack.click();
+
+    public btn_add_to_cart_item(name :string) : ChainablePromiseElement<WebdriverIO.Element>  {
+        const nameId = name.toLowerCase().replaceAll(' ','-');
+        return $('#add-to-cart-[TEXTO]'.replace('[TEXTO]',nameId))
+    }
+
+    public async addProductToCart (products : any[]): Promise<void> {
+        for (let i = 0; i< products.length; i++){
+            await (await this.btn_add_to_cart_item(products[i].Producto)).click();
+        }
+    }
+
+    public async goToCartShopping() : Promise<void> {
         await this.btnShopping.click();
     }
 }

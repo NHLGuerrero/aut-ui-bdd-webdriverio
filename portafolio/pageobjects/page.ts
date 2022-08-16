@@ -7,7 +7,9 @@ export default class Page {
     * Opens a sub page of the page
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
-     public open(path?: string): Promise<string> {
-        return browser.url('/')
+     public async open(path?: string): Promise<void> {
+        await browser.url('/')
+        // await browser.maximizeWindow()
+        await browser.setWindowSize(1920*1.6, 1080*1.8)
     }
 }

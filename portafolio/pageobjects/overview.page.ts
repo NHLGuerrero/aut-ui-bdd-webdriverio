@@ -2,7 +2,7 @@ import { ChainablePromiseElement } from 'webdriverio';
 
 import Page from './page';
 
-class Overview extends Page {
+class OverviewPage extends Page {
 
     public get titleOverview(): ChainablePromiseElement<WebdriverIO.Element> {
        return $('//div[2]/span')
@@ -12,10 +12,10 @@ class Overview extends Page {
     return $('#finish')
    }
 
-   public async finish (): Promise<void> {
+   public async finishPurchase(): Promise<void> {
     await this.btnFinish.click();
    }
 
 }
 
-export default new Overview ();
+export default new OverviewPage ();

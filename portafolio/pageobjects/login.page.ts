@@ -2,7 +2,6 @@ import { ChainablePromiseElement } from 'webdriverio';
 
 import Page from './page';
 
-
 class LoginPage extends Page {
     
      public get inputUsername(): ChainablePromiseElement<WebdriverIO.Element> {
@@ -27,8 +26,8 @@ class LoginPage extends Page {
         await this.btnSubmit.click();
     }
 
-    public open(): Promise<string> {
-        return super.open('login');
+    public async open(): Promise<void> {
+        await super.open('login');
     }
 
 }

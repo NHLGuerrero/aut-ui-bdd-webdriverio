@@ -1,14 +1,18 @@
 @web @compras @run
 Feature: Sitio Web de SauceDemo
+
+    @e2e
     Scenario: Flujo de compras completo
-        Given Estoy en la pagina de home
-        When Añado al carrito Sauce Labs Bolt T-Shirt, Sauce Labs Onesie y Sauce Labs Backpack
-        And Hago click en el carrito de compras
-        Then Visualizo el titulo "YOUR CART"
-        And Hago click en el boton de checkout
-        Then Visualizo el titulo "CHECKOUT: YOUR INFORMATION"
-        And Completo los campos con Nahuel, Guerrero y 1234
-        And Hago click en el boton continue
-        Then Visualizo el titulo "CHECKOUT: OVERVIEW"
-        And Hago click en el boton de finish
-        Then Visualizo el titulo de "CHECKOUT: COMPLETE!"
+        Given Me logueo con las credenciales standard_user y secret_sauce
+        When Añado al carrito los productos
+            | Producto                |
+            | Sauce Labs Bolt T-Shirt |
+            | Sauce Labs Onesie       |
+        And Completo los datos de compra
+            | Nombre | Apellido | CodigoPostal |
+            | Nahuel | Guerrero | 1234         |
+        And Visualizo el resumen de compra
+        Then Finalizo la compra y visualizo el mensaje de compra exitosa "THANK YOU FOR YOUR ORDER"
+
+
+
