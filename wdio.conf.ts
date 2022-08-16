@@ -166,7 +166,7 @@ export const config: WebdriverIO.Config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./portafolio/step-definitions/login.steps.ts'],
+        require: ['./portafolio/step-definitions/*.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -184,7 +184,7 @@ export const config: WebdriverIO.Config = {
         // <string> (expression) only execute the features or scenarios with tags matching the expression
         tagExpression: '',
         // <number> timeout for step definitions
-        timeout: 30000,
+        timeout: 30000 * 100,
         // <boolean> Enable this config to treat undefined definitions as warnings.
         ignoreUndefinedDefinitions: false
     },
@@ -280,6 +280,7 @@ export const config: WebdriverIO.Config = {
      */
       afterStep: async function () {
         await browser.takeScreenshot();
+        
     },
     /**
      *

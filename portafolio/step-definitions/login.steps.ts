@@ -7,6 +7,12 @@ Given(/^Estoy en la pagina de inicio de sesion$/, async () => {
     await LoginPage.open();
 });
 
+Given(/^Me logueo con las credenciales (.+) y (.+)$/, async (username:string, password:string) => {
+    await LoginPage.open();
+    await LoginPage.login(username, password);
+    await expect(await HomePage.titleProducts).toHaveTextContaining("PRODUCTS");
+});
+
 Then(/^Se muestra el titulo (.*) en la pantalla home$/, async (title:string) => {
     await expect(await HomePage.titleProducts).toHaveTextContaining(title);
 });

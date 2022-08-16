@@ -8,7 +8,8 @@ Feature: Sitio Web de SauceDemo
   Scenario: Alta de usuario con campos correctos
 
     When Inicio sesion con standard_user y secret_sauce
-    Then Se muestra el titulo PRODUCTS en la pantalla home
+    Then Se muestra el titulo PRODUCTS en la pantalla home 
+    # TODO: Modificar "se muestra" en todos los features
 
   @login_02
   Scenario Outline: Alta de usuario con campos incorrectos
