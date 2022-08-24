@@ -1,7 +1,6 @@
 import { Given, When, Then, DataTable } from '@wdio/cucumber-framework';
 
 import overviewPage from '../pageobjects/overview.page';
-import complete from '../pageobjects/complete.page';
 import homePage from '../pageobjects/home.page';
 import shoppingPage from '../pageobjects/shopping.page';
 import checkoutPage from '../pageobjects/checkout.page';
