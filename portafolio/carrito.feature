@@ -3,7 +3,7 @@ Feature: Sitio Web de SauceDemo
     Background:
         Given Me logueo con las credenciales standard_user y secret_sauce
 
-    @remove @run
+    @remove
     Scenario: Remover producto de la lista de compras
         When Añado al carrito los productos
             | Producto                |
@@ -15,9 +15,9 @@ Feature: Sitio Web de SauceDemo
             | Sauce Labs Onesie       |
         Then Dejo de visualizar los productos en la plantalla
 
-    @continueShopping
+    @continueShopping @run
     Scenario: Regresar al shopping
-        When Utilizo la funcion "CONTINUE SHOPPING"
+        When Utilizo la opcion CONTINUE SHOPPING
         Then Regreso la pantalla de home
 
 

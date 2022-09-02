@@ -12,14 +12,14 @@ Given(/^Elimino los productos del carrito$/, async (dataTable : DataTable) => {
     await shoppingPage.removeProductToCart(productsRemove);
 });
 
-Given(/^Dejo de visualizar el producto en la plantalla$/, async () => {
+Then(/^Dejo de visualizar el producto en la plantalla$/, async (item) => {
     // Esto quiere decir que:
     // 1) Tengo que mapear los elementos y no encontrarlos
     // Duda: como validar una negacion ? "No encontrarlos"
-    
+    await expect((await shoppingPage.inventoryItemsName)).toHaveElementClass(item);
 });
 
-Given(/^Utilizo la funcion \"(.*?)\"$/, async () => {
+When(/^Utilizo la opcion$/, async () => {
     // Esto quiere decir que:
     // 1) Estoy parado en el carrito de compras
     // 2) Hago click en el boton CONTINUE SHOPPING
@@ -28,7 +28,7 @@ Given(/^Utilizo la funcion \"(.*?)\"$/, async () => {
 
 });
 
-Given(/^Regreso la pantalla de home$/, async (title) => {
+Then(/^Regreso la pantalla de home$/, async (title) => {
     // Esto quiere decir que:
     // 1) Visualizo el titutlo PRODUCTC
     await expect(await homePage.titleProducts).toHaveTextContaining(title);
