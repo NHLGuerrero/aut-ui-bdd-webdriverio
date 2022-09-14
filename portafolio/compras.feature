@@ -1,4 +1,4 @@
-@web @compras @run
+@web @compras
 Feature: Sitio Web de SauceDemo
 
     @e2e
