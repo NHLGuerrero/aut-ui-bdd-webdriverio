@@ -1,4 +1,4 @@
-# Automation UI BDD WebdriverIO - EN DESARROLLO
+# Automation UI BDD WebdriverIO
 
 Proyecto basado en WebDriverIO, Cucumber, TypeScript, Allure Report y Node.js
 
