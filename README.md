@@ -25,11 +25,7 @@ Proyecto basado en WebDriverIO, Cucumber, TypeScript, Allure Report y Node.js
 
         npm install
 
-- Ejecutar el asistente de configuración:
-
-        npm init wdio .
-
-- Ejecución de test:
+- Ejecución de tests:
 
         npm run execute-tests
 
