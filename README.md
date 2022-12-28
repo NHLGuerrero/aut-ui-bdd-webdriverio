@@ -4,11 +4,7 @@ Proyecto basado en WebDriverIO, Cucumber, TypeScript, Allure Report y Node.js
 
 ## Estructura del proyecto
 
-
-- portafolio/features: archivos en lenguaje Gherkin con escenarios de prueba.
-- portafolio/stepDefinitions: scripts de flujos de prueba.
-- portafolio/pages: clases con Page Objects modelados.
-- README.md: documentación de uso.
+[![Estructura-proyecto-wdio.png](https://i.postimg.cc/kgVHvFcw/Estructura-proyecto-wdio.png)](https://postimg.cc/21DTzWgB)
 
 ## Requisitos
 
